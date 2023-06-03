@@ -4,11 +4,11 @@ from joblib import Parallel, delayed
 import joblib
 
 app=Flask(__name__)
-model = joblib.load(open("E:/Techbytes/Fake news detection 2/Model.pkl","rb"))
-tfvect= joblib.load(open("E:/Techbytes/Fake news detection 2/vectoriser.pkl","rb"))
-modelLR= joblib.load(open("E:/Techbytes/Fake news detection 2/LRModel.pkl","rb"))
-modelDT= joblib.load(open("E:/Techbytes/Fake news detection 2/DTModel.pkl","rb"))
-modelGB= joblib.load(open("E:/Techbytes/Fake news detection 2/GBModel.pkl","rb"))
+tfvect= joblib.load(open("E:/Techbytes/Fake news detection Final Project/Models/vectoriser.pkl","rb"))
+model = joblib.load(open("E:/Techbytes/Fake news detection Final Project/Models/RFModel.pkl","rb"))
+modelLR= joblib.load(open("E:/Techbytes/Fake news detection Final Project/Models/LRModel.pkl","rb"))
+modelDT= joblib.load(open("E:/Techbytes/Fake news detection Final Project/Models/DTModel.pkl","rb"))
+modelGB= joblib.load(open("E:/Techbytes/Fake news detection Final Project/Models/GBModel.pkl","rb"))
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 def fake_news_detRF(vectorized_input_data):
