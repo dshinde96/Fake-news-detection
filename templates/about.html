@@ -1,83 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>about.fakenews</title>
-	<style>
-		* {
-		  box-sizing: border-box;
-		}
-		
-		/* Create two equal columns that floats next to each other */
-		.column {
-		  float: left;
-		  width: 50%;
-		  padding: 10px;
-		  height: 300px; /* Should be removed. Only for demonstration */
-		}
-		
-		/* Clear floats after the columns */
-		.row:after {
-		  content: "";
-		  display: table;
-		  clear: both;
-		}
-		h1{text-align: left;margin-left: 30px; font-size:60px;}
-		h2{text-align: center;}
-		h2{color: black;}
-		</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="Home.css"> -->
+    <title>Fake News Detection</title>
+    <style>
+        
+        .main{
+            margin: 50px;
+        }
+        body{
+            background: #e8e2db; 
+        }
+
+        header{
+            margin: 20px;
+        }
+        nav{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+        }
+        h1{text-align: center; font-style:bold; color: black; font-family: Algerian;}
+        .navigation{
+            background-color:  #1a3263;
+        }
+        #navbt{
+            margin: 10px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #ff8c1a;
+            /* border-color: #ff8c1a; */
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+            /* width:150px; */
+            font-size: 30px;
+        }
+        #navbt:hover{
+            background-color: #ff8c1a;
+            color: white;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+        @media only screen and (max-width: 730px) {
+            nav{
+                display: block;
+            }
+            #navbt{
+                display: block;
+                width:100%;
+                margin-top: 10px;
+            }
+        }
+        /* .mncnt{
+            display: grid;
+            grid-template-columns: 1fr;
+        } */
+        .cnt{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            margin: 10px;
+            padding: 30px;
+            background-color: #e8e2db;
+            border-radius: 100px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .img{
+            margin: 10px;
+            padding: 10px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        img{
+            border-radius: 40px;
+        }
+        .head2{
+            display: grid;
+            width: 450px;
+            margin: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px solid;
+            border-color: #1a3263;
+            padding: 10px;
+            text-align: center;
+            color: #ff8c1a;
+        }
+        
+        .para{
+            margin: 10px;
+            padding: 10px;
+            font-weight: bold;
+            font-size: large;
+        }
+        .cnt1{
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        /* .mnhead{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        } */
+    </style>
 </head>
 <body>
-<h1><b> About us</b></h1>
-
-<hr>
-	<div class="row">
-		<div class="column" style="background-color:white;height: 300px; width: 600px;box-sizing: border-box; margin-left: 30px;">
-		  <h2>TECHBYTES</h2>
-		  <p><b> <hr> 
-			We are young team who belives in that technology can give us a better way to identify the reality. As we all know that news is that part of communication that keeps us informed about changing events, issues, and characters in the world outside. When a fake news is spread then it affects on society,education,public,social media,etc. <br>
-			That's why our mission is to bring a software that recognize the difference between fake news and real news. So that you can get real time information in a very faster way. 
-			We believe our fake news detection system will give you a better experience.
-			<hr>
-		</b></p>
-		</div><div class="column" style="background-color:white; float: right;">
-		  <img src="https://images.idgesg.net/images/idge/imported/imageapi/2022/02/03/21/programming_coding_elements_lines_of_code_development_developers_teamwork_by_dean_mitchell_gettyimages-1055056840_2400x1600-100795791-large-100918079-large.jpg?auto=webp&quality=85,70" width="420px" alt="teamwork">
-		</div>
-	  </div>
-
-
-<hr>
-
-
-
-<div><h3>Use Cases :</h3>
+    
+    <header>
+        <div class="navigation">
+            <nav>
+                <p id="navbt">
+                    About Us
+                </p>
+            </nav>
+        </div>
+        <br>
+        <br>
+        <div class="mnhead">
+            <div >
+                <h1 class="mainhead">
+                    Fake News Detection System
+                </h1>
+            </div>
+            <!-- <div class="img">
+                <img src="Fake news icon.jpg" alt="Image Cannot displayed">
+            </div> -->
+        </div>
+        <br>
+    </header>
+    <section>
+        <div class="mncnt">
+            <div class="cnt">
+                <div class="txt">
+                    <h2>TECHBYTES</h2>
+                    <p><b> <hr> 
+                        We are young team who belives in that technology can give us a better way to identify the reality. As we all know that news is that part of communication that keeps us informed about changing events, issues, and characters in the world outside. When a fake news is spread then it affects on society,education,public,social media,etc. <br>
+                        That's why our mission is to bring a software that recognize the difference between fake news and real news. So that you can get real time information in a very faster way. 
+                        We believe our fake news detection system will give you a better experience.
+                        <hr>
+                    </b></p>
+                </div>
+                <div class="img">
+                    <img src="https://images.idgesg.net/images/idge/imported/imageapi/2022/02/03/21/programming_coding_elements_lines_of_code_development_developers_teamwork_by_dean_mitchell_gettyimages-1055056840_2400x1600-100795791-large-100918079-large.jpg?auto=webp&quality=85,70" width="420px" alt="teamwork">
+                </div>
+            </div>
+        </div>
+<div class="cnt1">
+            <hr>
+            <div class="head2">
+                <h3>Use Cases</h3>
+            </div>
+    
+	<p>Government agencies: To monitor social media and news outlets to provide public safety and natural security.</p>
+    
+	<p>News organization: To verify the accuracy of information before publishing to prevent the spread of false information.</p>
+    
+	<p>Educational institutions: To teach critical thinking and media literacy skills to students. They can distinguish between credible and incredible sources of information.</p>
+    
 	<p>Social media platforms: By implementing a fake news detection model, social media platforms can quickly identify and remove misleading content to reduce potential harm.</p>
 	
-	<p>News organization: To verify the accuracy of information before publishing to prevent the spread of false information.</p>
-	
-	<p>Government agencies: To monitor social media and news outlets to provide public safety and natural security.</p>
-	
-	<p>Educational institutions: To teach critical thinking and media literacy skills to students. They can distinguish between credible and incredible sources of information.</p>
-	
-	<p>Mitigation: By collecting data from the users, the model will send a notification to the officials about whom the fake news is being spread and request them to confirm the correctness of the news.</p></div>
+	<p>Mitigation: By collecting data from the users, the model will send a notification to the officials about whom the fake news is being spread and request them to confirm the correctness of the news.</p>
 
 	<!-- https://www.kaggle.com/code/therealsampat/fake-news-detection -->
 	
-<h3>Dependencies / Show stopper: </h3>
+    <div class="head2">
+        <h3>Dependencies / Show stopper</h3>
+    </div>
+<p>Multilingual Input: Due to multilingual input Model may generate inaccurate results.</p>
 <p>Data: The model depends on the quality and quantity of data. A large and diverse dataset is required.</p>
 <p>NLP Tools: For pre-processing and extracting relevant features of data such as frequency, sentiment, and topic modeling.</p>
-<p>ML Algorithm: To learn from data and make predictions, the model may use logistic regression, decision trees, or neural networks.</p>
-
 <p>Limited or biased training data: If training data used to train the model is biased or limited then model performance may suffer.</p>
+<p>ML Algorithm: To learn from data and make predictions, the model may use logistic regression, decision trees, or neural networks.</p>
 <p>Rapidly changing news landscape: If the model is not updated frequently or cannot adapt to new types of fake news, it may become less effective over time.</p>
-<p>Multilingual Input: Due to multilingual input Model may generate inaccurate results.</p>
 <hr>
-<img src="https://miro.medium.com/max/1262/1*LBn_F2ALsKUAKK6vbQbJuw.png" alt="fake news" width="620px" style="display: block; margin-left: auto; margin-right: auto;"> <hr>
-<footer>
-	<p>
-		copyright &copy2023
-	</p>
-</footer>
+</div>
+        <br>
+        <br>
+        <div class = "sec">
+            <div class="para">
+                <p>
+                    Fake news detection is an increasingly crucial and complex task in today's information-driven society. With the rapid spread of information through various online platforms, it has become challenging to discern between accurate, trustworthy news and deceptive, fabricated stories. Fake news detection refers to the process of identifying and flagging misleading or false information presented as news. Advanced technologies, such as natural language processing and machine learning algorithms, play a vital role in this endeavor.
+                    </p>
+            </div>
+        </div>
+        
+    </section>
 </body>
 </html>
+
+
+<!-- Feature1 -main branch of project
+    Master - Experimental branch of project 
+    if want to do any changes in project then first on master if it change is good the merge the two branches otherwise our main branch is unaffected -->
