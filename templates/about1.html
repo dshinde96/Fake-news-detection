@@ -33,7 +33,7 @@
         }
         h1{text-align: center; font-style:bold; color: black; font-family: Algerian;}
         .navigation{
-            background-color:  #1a3263; ;
+            background-color:  #1a3263;
         }
         #navbt{
             margin: 10px;
@@ -64,31 +64,55 @@
                 margin-top: 10px;
             }
         }
-        .contact{
-            margin: 10px;
-            background-color: white;
-            border: 2px solid;
-            border-color: #1a3263;
-            border-radius: 10px;
-            padding: 20px;
-        }
+        /* .mncnt{
+            display: grid;
+            grid-template-columns: 1fr;
+        } */
         .cnt{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
             margin: 10px;
             padding: 30px;
             background-color: #e8e2db;
             border-radius: 100px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .cnt1{
+        .img{
             margin: 10px;
             padding: 10px;
-            padding-top: 0px;
-            margin-top: 0px;
+            margin-top: auto;
+            margin-bottom: auto;
         }
+        img{
+            border-radius: 40px;
+        }
+        .head2{
+            display: grid;
+            width: 450px;
+            margin: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px solid;
+            border-color: #1a3263;
+            padding: 10px;
+            text-align: center;
+            color: #ff8c1a;
+        }
+        
         .para{
             margin: 10px;
             padding: 10px;
             font-weight: bold;
             font-size: large;
+        }
+        .cnt1{
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
         }
         /* .mnhead{
             display: grid;
@@ -102,7 +126,7 @@
         <div class="navigation">
             <nav>
                 <p id="navbt">
-                    Contact Us
+                    About Us
                 </p>
             </nav>
         </div>
@@ -121,23 +145,51 @@
         <br>
     </header>
     <section>
-        <div class="contact">
-            <h3>
-                Feel Free to contact us regarding any querry you feel about the site. Feel free to contact us if you found any wrong result displayed on screen. Our customer support team is there for you 24*7.
-            </h3>
+        <div class="mncnt">
             <div class="cnt">
-                <h2>
-                    Contact us here...
-                </h2>
-                <p class="cnt1">
-                    Email - ABC@xyz.com
-                    <br>
-                    Helpline Number- +91 9000000000
-                    <br>
-                    Location - abc complex, 6th floor, xyz park, Pune, Maharashtra, India 212121
-                </p>
+                <div class="txt">
+                    <h2>TECHBYTES</h2>
+                    <p><b> <hr> 
+                        We are young team who belives in that technology can give us a better way to identify the reality. As we all know that news is that part of communication that keeps us informed about changing events, issues, and characters in the world outside. When a fake news is spread then it affects on society,education,public,social media,etc. <br>
+                        That's why our mission is to bring a software that recognize the difference between fake news and real news. So that you can get real time information in a very faster way. 
+                        We believe our fake news detection system will give you a better experience.
+                        <hr>
+                    </b></p>
+                </div>
+                <div class="img">
+                    <img src="https://images.idgesg.net/images/idge/imported/imageapi/2022/02/03/21/programming_coding_elements_lines_of_code_development_developers_teamwork_by_dean_mitchell_gettyimages-1055056840_2400x1600-100795791-large-100918079-large.jpg?auto=webp&quality=85,70" width="420px" alt="teamwork">
+                </div>
             </div>
         </div>
+<div class="cnt1">
+            <hr>
+            <div class="head2">
+                <h3>Use Cases</h3>
+            </div>
+    
+	<p>Government agencies: To monitor social media and news outlets to provide public safety and natural security.</p>
+    
+	<p>News organization: To verify the accuracy of information before publishing to prevent the spread of false information.</p>
+    
+	<p>Educational institutions: To teach critical thinking and media literacy skills to students. They can distinguish between credible and incredible sources of information.</p>
+    
+	<p>Social media platforms: By implementing a fake news detection model, social media platforms can quickly identify and remove misleading content to reduce potential harm.</p>
+	
+	<p>Mitigation: By collecting data from the users, the model will send a notification to the officials about whom the fake news is being spread and request them to confirm the correctness of the news.</p>
+
+	<!-- https://www.kaggle.com/code/therealsampat/fake-news-detection -->
+	
+    <div class="head2">
+        <h3>Dependencies / Show stopper</h3>
+    </div>
+<p>Multilingual Input: Due to multilingual input Model may generate inaccurate results.</p>
+<p>Data: The model depends on the quality and quantity of data. A large and diverse dataset is required.</p>
+<p>NLP Tools: For pre-processing and extracting relevant features of data such as frequency, sentiment, and topic modeling.</p>
+<p>Limited or biased training data: If training data used to train the model is biased or limited then model performance may suffer.</p>
+<p>ML Algorithm: To learn from data and make predictions, the model may use logistic regression, decision trees, or neural networks.</p>
+<p>Rapidly changing news landscape: If the model is not updated frequently or cannot adapt to new types of fake news, it may become less effective over time.</p>
+<hr>
+</div>
         <br>
         <br>
         <div class = "sec">
